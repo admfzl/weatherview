@@ -1,0 +1,49 @@
+# Render Blueprint Configuration
+# This file defines the infrastructure for Render deployment
+
+services:
+  # Web Service (Frontend + Backend)
+  - type: web
+    name: weatherview-app
+    env: node
+    plan: free
+    buildCommand: npm run build:render
+    startCommand: npm run start:render
+    healthCheckPath: /api/weather/current
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: DATABASE_URL
+        fromDatabase:
+          name: weatherview-db
+          property: connectionString
+    domains:
+      - weatherview-app.onrender.com
+
+  # PostgreSQL Database
+  - type: pserv
+    name: weatherview-db
+    env: postgresql
+    plan: free
+    ipAllowList: []
+    
+  # Background Worker (Weather Data Collection)
+  - type: worker
+    name: weatherview-worker
+    env: node
+    plan: free
+    buildCommand: npm run build:worker
+    startCommand: npm run start:worker
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: DATABASE_URL
+        fromDatabase:
+          name: weatherview-db
+          property: connectionString
+
+# Optional: Redis for caching
+# - type: redis
+#   name: weatherview-redis
+#   plan: free
+#   ipAllowList: []
