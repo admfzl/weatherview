@@ -60,49 +60,6 @@ export default function About() {
           </div>
         </section>
 
-        {/* Project Objectives */}
-        <section className="weather-card rounded-lg p-6 shadow-lg border border-gray-700">
-          <h3 className="text-lg font-semibold text-white mb-4">Project Objectives</h3>
-          <div className="space-y-4">
-            <div className="flex items-start space-x-3">
-              <Target className="weather-accent mt-1" size={16} />
-              <div>
-                <h4 className="font-medium text-white">Real-Time Weather Data Updates</h4>
-                <p className="text-sm text-gray-400">
-                  Fetch real-time and forecasted weather data using the Open-Meteo API without relying on physical sensors.
-                </p>
-              </div>
-            </div>
-            <div className="flex items-start space-x-3">
-              <Target className="weather-accent mt-1" size={16} />
-              <div>
-                <h4 className="font-medium text-white">Data Visualization</h4>
-                <p className="text-sm text-gray-400">
-                  Present weather information through interactive charts and sortable tables for enhanced user interpretation.
-                </p>
-              </div>
-            </div>
-            <div className="flex items-start space-x-3">
-              <Target className="weather-accent mt-1" size={16} />
-              <div>
-                <h4 className="font-medium text-white">Forecast Error Metrics</h4>
-                <p className="text-sm text-gray-400">
-                  Compute and display forecast error metrics such as Mean Squared Error (MSE) to evaluate forecasting performance.
-                </p>
-              </div>
-            </div>
-            <div className="flex items-start space-x-3">
-              <Target className="weather-accent mt-1" size={16} />
-              <div>
-                <h4 className="font-medium text-white">Cost-Effective Implementation</h4>
-                <p className="text-sm text-gray-400">
-                  Build a fully functional dashboard without physical hardware, relying only on free-tier services.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-
         {/* Technical Stack */}
         <section className="weather-card rounded-lg p-6 shadow-lg border border-gray-700">
           <h3 className="text-lg font-semibold text-white mb-4">Technical Implementation</h3>
