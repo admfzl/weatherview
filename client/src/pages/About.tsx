@@ -145,10 +145,6 @@ export default function About() {
                 <h4 className="font-medium text-white">Lecturer</h4>
                 <p className="text-sm text-gray-400">Ts Dr Ooi Boon Yaik</p>
               </div>
-              <div>
-                <h4 className="font-medium text-white">Submission Date</h4>
-                <p className="text-sm text-gray-400">26 July 2025</p>
-              </div>
             </div>
           </div>
         </section>
